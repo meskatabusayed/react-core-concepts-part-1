@@ -1,5 +1,6 @@
 
 
+
 import './App.css'
 
 function App() {
@@ -11,8 +12,14 @@ function App() {
        
       <h1>Vite + React</h1>
      <Person></Person>
+      <Student name="DU" address="Dhaka"></Student>
+      <Student name="CU" address="ctg"></Student>
+      <Student name="BWU" address="India"></Student>
       <Student></Student>
       <Developer></Developer>
+      <Device name="laptop" price="30000"></Device>
+      <Device name="mouse" price="400"></Device>
+      <Device name="watch" price="2000"></Device>
     </>
   )
 }
@@ -30,12 +37,12 @@ function Person(){
 
 }
 
-function Student(){
+function Student({name="null" , address="null"}){
 
   return (
     <div className='borderStyle'>
-    <h2>University Name : </h2>
-    <h3>University Address : </h3>
+    <h2>University Name : {name}</h2>
+    <h3>University Address : {address}</h3>
     </div>
   )
 }
@@ -52,5 +59,15 @@ function Developer(){
       <h1>Javascript</h1>
       <h2>IDE</h2>
     </div>
+  )
+}
+
+function Device(props){
+  console.log(props);
+  return(
+    <>
+    <h1>Name : {props.name} </h1>
+    <h2>Price : {props.price}</h2>
+    </>
   )
 }
