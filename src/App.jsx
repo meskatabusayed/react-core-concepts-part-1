@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 
 
 
 import './App.css'
-
+import Todo from './todo';
 function App() {
 
 
@@ -11,7 +13,7 @@ function App() {
       
        
       <h1>Vite + React</h1>
-     <Person></Person>
+     {/* <Person></Person>
       <Student name="DU" address="Dhaka"></Student>
       <Student name="CU" address="ctg"></Student>
       <Student name="BWU" address="India"></Student>
@@ -19,7 +21,10 @@ function App() {
       <Developer></Developer>
       <Device name="laptop" price="30000"></Device>
       <Device name="mouse" price="400"></Device>
-      <Device name="watch" price="2000"></Device>
+      <Device name="watch" price="2000"></Device> */}
+    <Todo task="Go University" isDone={true}></Todo>
+    <Todo task="come University" isDone={true}></Todo>
+    <Todo task="cooking food" isDone={false}></Todo>
     </>
   )
 }
